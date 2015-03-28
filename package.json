@@ -1,0 +1,24 @@
+{
+  "name": "NavBar",
+  "version": "1.0.0",
+  "description": "Offliberynav",
+  "main": "main.js",
+  "scripts": {
+    "test": "standard",
+    "app": "atom-shell ./",
+    "build": "atom-shell-packager . Offliberty"
+  },
+  "keywords": [
+    "offliberty"
+  ],
+  "author": "Jeremy",
+  "license": "none",
+  "dependencies": {
+    "menubar": "^2.0.4"
+  },
+  "standard": {
+    "ignore": [
+      "Offliberty.app/**"
+    ]
+  }
+}
