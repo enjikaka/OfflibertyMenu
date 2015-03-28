@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo no",
     "app": "atom-shell ./",
-    "build": "atom-shell-packager . Offliberty"
+    "build": "atom-shell-packager . OfflibertyMenu"
   },
   "keywords": [
     "offliberty"
