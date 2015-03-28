@@ -19,3 +19,7 @@ Menubar app for OS X to download stuff with Offliberty.
 ### Building the app
 
 ```npm run build```
+
+### Credits
+
+Power icon by Garrett Knoll
