@@ -1,12 +1,12 @@
 {
   "name": "OfflibertyMenu",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Offlibery menu app",
   "main": "main.js",
   "scripts": {
     "test": "echo no",
     "app": "atom-shell ./",
-    "build": "atom-shell-packager . OfflibertyMenu"
+    "build": "rm -rf OfflibertyMenu.app && atom-shell-packager . OfflibertyMenu"
   },
   "keywords": [
     "offliberty"
