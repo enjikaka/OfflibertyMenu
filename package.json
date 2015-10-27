@@ -1,21 +1,21 @@
 {
-  "name": "OfflibertyMenu",
+  "name": "YTDownloadMenu",
   "version": "0.0.4",
-  "description": "Offlibery menu app",
+  "description": "YouTube Downloader Menu App",
   "main": "main.js",
   "scripts": {
     "test": "echo no",
     "app": "electron ./",
-    "build": "electron-packager . OfflibertyMenu --platform=darwin --arch=x64 --version=0.30.2 --overwrite --ignore='node_modules/electron-(packager|prebuild)'"
+    "build": "electron-packager . YTDownloadMenu --app-version=0.0.4 --platform=darwin --arch=x64 --version=0.30.2 --overwrite --ignore='node_modules/electron-(packager|prebuild)'"
   },
   "keywords": [
-    "offliberty"
+    "offliberty",
+    "youtubeinmp3"
   ],
   "author": "enjikaka",
   "license": "none",
   "dependencies": {
     "menubar": "^2.3.0",
-    "offliberty": "0.0.4",
     "open": "0.0.5"
   }
 }
