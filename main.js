@@ -2,7 +2,7 @@ var menubar = require('menubar');
 
 var menu = menubar({
 	width: 400,
-	height: 80,
+	height: 100,
 	dir: __dirname,
 	showDockIcon: true
 });

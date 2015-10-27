@@ -1,12 +1,12 @@
 {
   "name": "OfflibertyMenu",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Offlibery menu app",
   "main": "main.js",
   "scripts": {
     "test": "echo no",
     "app": "electron ./",
-    "build": "electron-packager . OfflibertyMenu --platform=darwin --arch=x64 --version=0.30.2 --ignore='node_modules/electron-(packager|prebuild)'"
+    "build": "electron-packager . OfflibertyMenu --platform=darwin --arch=x64 --version=0.30.2 --overwrite --ignore='node_modules/electron-(packager|prebuild)'"
   },
   "keywords": [
     "offliberty"
