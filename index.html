@@ -5,13 +5,16 @@
 	<title>Test</title>
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,300">
 	<style>
-	body {
+	* {
 		font-family: 'Roboto', sans-serif;
+	}
+	body {
 		margin:0;
 		width:400px;
-	    overflow:hidden;
+	  overflow:hidden;
 		display:flex;
 		flex-direction:column;
+		background-color:rgba(255,255,255,0);
 	}
 	header {
 		background-color:#FF5722;
@@ -71,6 +74,7 @@
 		display:block;
 		outline:none;
 		flex:1;
+		background:none;
 		height:100%;
 		border:0;
 		box-sizing:border-box;
@@ -81,48 +85,29 @@
 		color:white;
 		cursor:pointer;
 	}
+	.close {
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-color: #D32F2F;
+		color: white;
+		padding: .5rem .8rem;
+		border-bottom-right-radius: 4px;
+		border: 0;
+		outline: none;
+	}
 	</style>
 </head>
 <body>
+	<button class="close" id="close-button">x</button>
 	<header>
 		<h1>Offliberty</h1>
-		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
-		<rect x="0" y="7.45289" width="4" height="16.0942" fill="#333">
-		<animate attributeName="height" attributeType="XML" values="5;21;5" begin="0s" dur="0.6s" repeatCount="indefinite"></animate>
-		<animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0s" dur="0.6s" repeatCount="indefinite"></animate>
-		</rect>
-		<rect x="10" y="6.54711" width="4" height="17.9058" fill="#333">
-		<animate attributeName="height" attributeType="XML" values="5;21;5" begin="0.15s" dur="0.6s" repeatCount="indefinite"></animate>
-		<animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0.15s" dur="0.6s" repeatCount="indefinite"></animate>
-		</rect>
-		<rect x="20" y="10.5471" width="4" height="9.90578" fill="#333">
-		<animate attributeName="height" attributeType="XML" values="5;21;5" begin="0.3s" dur="0.6s" repeatCount="indefinite"></animate>
-		<animate attributeName="y" attributeType="XML" values="13; 5; 13" begin="0.3s" dur="0.6s" repeatCount="indefinite"></animate>
-		</rect>
-		</svg>
+		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 30"><rect x="0" y="7.45289" width="4" height="16.0942" fill="#333"><animate attributeName="height" values="5;21;5" begin="0s" dur="0.6s" repeatCount="indefinite"></animate><animate attributeName="y" values="13; 5; 13" begin="0s" dur="0.6s" repeatCount="indefinite"></animate></rect><rect x="10" y="6.54711" width="4" height="17.9058" fill="#333"><animate attributeName="height" values="5;21;5" begin="0.15s" dur="0.6s" repeatCount="indefinite"></animate><animate attributeName="y" values="13; 5; 13" begin="0.15s" dur="0.6s" repeatCount="indefinite"></animate></rect><rect x="20" y="10.5471" width="4" height="9.90578" fill="#333"><animate attributeName="height" values="5;21;5" begin="0.3s" dur="0.6s" repeatCount="indefinite"></animate><animate attributeName="y" values="13; 5; 13" begin="0.3s" dur="0.6s" repeatCount="indefinite"></animate></rect></svg>
 	</header>
 	<main>
 		<input type="url" id="url" placeholder="Youtube or Soundcloud URL...">
-		<button>Download</button>
+		<button id="download-song">Download</button>
 	</main>
-	<script>
-		var offliberty = require('offliberty'),
-			open = require("open");
-
-		document.querySelector('button').addEventListener('click', function() {
-			document.body.classList.toggle('loading');
-			document.querySelector('h1').textContent = "Loading...";
-			offliberty.off(document.querySelector('#url').value, function(err,dl) {
-				if (!err) {
-					open(dl);
-					document.querySelector('h1').textContent = "Offliberty";
-					document.body.classList.toggle('loading');
-					document.querySelector('#url').value = null;
-				} else {
-					console.error(err);
-				}
-			});
-		});
-	</script>
+	<script src="app.js"></script>
 </body>
 </html>

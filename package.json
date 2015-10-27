@@ -5,8 +5,8 @@
   "main": "main.js",
   "scripts": {
     "test": "echo no",
-    "app": "atom-shell ./",
-    "build": "rm -rf OfflibertyMenu.app && atom-shell-packager . OfflibertyMenu"
+    "app": "electron ./",
+    "build": "electron-packager . OfflibertyMenu --platform=darwin --arch=x64 --version=0.30.2 --ignore='node_modules/electron-(packager|prebuild)'"
   },
   "keywords": [
     "offliberty"
@@ -14,8 +14,8 @@
   "author": "enjikaka",
   "license": "none",
   "dependencies": {
-    "menubar": "^2.0.4",
-    "open": "0.0.5",
-    "offliberty": "0.0.4"
+    "menubar": "^2.3.0",
+    "offliberty": "0.0.4",
+    "open": "0.0.5"
   }
 }
